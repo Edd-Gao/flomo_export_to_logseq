@@ -77,8 +77,7 @@ for memo in memos:
     tags_set.add("card")
 
     # Get header
-    header_date_list = date_str.split(' ')[0].split("-")
-    header_date = f"[[{header_date_list[1]}/{header_date_list[2]}/{header_date_list[0]}]]"
+    header_date = date_str.split(' ')[0]
     header = f"date:: {header_date}\ntags:: {', '.join(tags_set)}\n"
 
     # Get file
