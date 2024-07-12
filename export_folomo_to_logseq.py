@@ -4,7 +4,6 @@ import argparse
 from bs4 import BeautifulSoup
 import os
 import argparse
-import html2markdown
 
 def filter_function(tag):
     return (tag not in ['', "from", "person", "book", "event", "author", "authors", "paper", "podcast", "web"])
