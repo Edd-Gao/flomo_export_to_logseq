@@ -14,7 +14,15 @@ parser.add_argument('input_dir', help='Path to the input directory')
 args = parser.parse_args()
 
 # Read local HTML file.
-input_file = os.path.join(args.input_dir, '树懒君的笔记.html')
+
+# Find the HTML file in the input directory
+html_files = [file for file in os.listdir(args.input_dir) if file.endswith('.html')]
+if len(html_files) == 0:
+    print("No HTML files found in the input directory.")
+    exit()
+
+# Assuming there is only one HTML file, select the first one
+input_file = os.path.join(args.input_dir, html_files[0])
 with open(input_file, 'r', encoding='utf-8') as f:
     html_content = f.read()
 
