@@ -74,7 +74,6 @@ for memo in memos:
             tags_set.remove(tag)
             tags_set.add("[[" + tag + "]]")
     tags_set.add("flomo")
-    tags_set.add("card")
 
     # Get header
     header_date = date_str.split(' ')[0]
