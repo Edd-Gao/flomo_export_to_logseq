@@ -77,7 +77,7 @@ for memo in memos:
 
     # Get header
     header_date = date_str.split(' ')[0]
-    header = f"date:: {header_date}\ntags:: {', '.join(tags_set)}\n"
+    header = f"date:: [[{header_date}]]\ntags:: {', '.join(tags_set)}\n"
 
     # Get file
     files_div = memo.find('div', {'class': 'files'})
