@@ -76,7 +76,7 @@ for memo in memos:
     tags_set.add("flomo")
 
     # Get header
-    header_date = date_str.split(' ')[0]
+    header_date = date_str.split(' ')[0].replace("-","/")
     header = f"date:: [[{header_date}]]\ntags:: {', '.join(tags_set)}\n"
 
     # Get file
